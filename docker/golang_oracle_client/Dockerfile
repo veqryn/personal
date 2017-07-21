@@ -17,8 +17,9 @@ COPY ./docker/golang_oracle_client/oci8.pc ${ORACLE_INCLUDE}/
 
 # Install requirements for Golang
 RUN set -eux; \
+  yum-config-manager --enable ol7_optional_latest; \
   yum -y update; \
-  yum -y install curl tar gzip gcc-c++ gcc glibc-devel make pkgconfig; \
+  yum -y install curl tar gzip gcc-c++ gcc glibc-devel make pkgconfig glibc-static; \
   yum clean all;
 
 # Install Golang

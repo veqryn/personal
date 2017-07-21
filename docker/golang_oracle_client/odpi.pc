@@ -10,9 +10,9 @@ glib_genmarshal=glib-genmarshal
 gobject_query=gobject-query
 glib_mkenums=glib-mkenums
 
-Name: oci8
-Description: Oracle database engine
-Version: ${version}
-Libs: -L${libdir} -lclntsh
+Name: odpi
+Description: ODPI-C Library
+Version: 2.0.0-rc.2
+Libs: -L${libdir} -lodpi
 Libs.private:
 Cflags: -I${includedir}
