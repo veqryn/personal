@@ -11,8 +11,8 @@ import (
 func main() {
 
 	// connect
-	conn, err := sql.Open("oci8", "my_owner/my_owner@ORCL") // mattn
-	//conn, err := sql.Open("ora", "my_owner/my_owner@ORCL") // rana
+	conn, err := sql.Open("oci8", "my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain") // mattn
+	//conn, err := sql.Open("ora", "my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain") // rana
 	if err != nil {
 		panic(err)
 	}

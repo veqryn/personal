@@ -28,8 +28,22 @@ services:
 
   oracle-db-preload-dev:
     image: container-registry.oracle.com/database/instantclient:12.2.0.1
-    command: /bin/bash -c "sqlplus system/Password1234@oracle-db-dev:1521/ORCL.localdomain < /sql/system/001_create_my_owner_up.sql && sqlplus my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain < /sql/my_owner/001_ips_up.sql"
+    command: /bin/bash -c "sqlplus system/Password1234@oracle-db-dev:1521/ORCL.localdomain < /sql/system/001_create_my_owner_up.sql && sqlplus my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain < /sql/ssc_owner/001_ips_up.sql"
     container_name: oracle-db-preload-dev
     hostname: oracle-db-preload-dev
     volumes:
       - ./migrations/oracle:/sql
+    depends_on:
+      - oracle-db-dev
+
+  oracle-golang:
+    build:
+      context: .
+      dockerfile: docker/golang_oracle_client/Dockerfile
+    command: /bin/bash -c "go build -o /go/bin/oracle github.com/veqryn/personal/src/oracle && /go/bin/oracle"
+    container_name: oracle-golang
+    hostname: oracle-golang
+    volumes:
+      - .:/go/src/github.com/veqryn/personal
+    depends_on:
+      - oracle-db-dev

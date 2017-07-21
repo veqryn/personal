@@ -1,0 +1,22 @@
+# OS Files
+*.swp
+*~
+._*
+.DS_Store
+*.ipr
+*.iml
+*.iws
+.idea/
+dist/
+logs/
+log/
+nbproject/
+/SR/
+.tidyall.d/
+/tmp/
+target/
+_ide_helper.php
+_phpstorm.meta.php
+
+# Ignore vendor dir
+vendor/

@@ -1,0 +1,12 @@
+hash: e4cf728da8d333ff71fba90507ce77eebf2e920e2d3a8e63c2cfecbe75337370
+updated: 2017-07-20T15:57:07.0151592-06:00
+imports:
+- name: github.com/go-sql-driver/mysql
+  version: 3955978caca48c1658a4bb7a9c6a0f084e326af3
+- name: github.com/mattn/go-oci8
+  version: a406da5749859419ebd8b7ad51c8833e9a64e719
+- name: golang.org/x/net
+  version: fb93926129b8ec0056f2f458b1f519654814edf0
+  subpackages:
+  - context
+testImports: []
