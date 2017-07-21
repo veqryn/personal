@@ -12,7 +12,7 @@ func main() {
 
 	// connect
 	conn, err := sql.Open("oci8", "my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain") // mattn
-	//conn, err := sql.Open("ora", "my_owner/my_owner@oracle-db-dev:1521/ORCL.localdomain") // rana
+	//conn, err := sql.Open("ora", "my_owner/my_owner@ORCL") // rana
 	if err != nil {
 		panic(err)
 	}
