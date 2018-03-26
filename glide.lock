@@ -1,12 +1,70 @@
-hash: e4cf728da8d333ff71fba90507ce77eebf2e920e2d3a8e63c2cfecbe75337370
-updated: 2017-07-20T15:57:07.0151592-06:00
+hash: 6ee03c154df29539ab8f18c197d2acba3d2250e2310e8e3d92be745f686d37b7
+updated: 2018-03-14T14:18:44.844535-06:00
 imports:
+- name: github.com/davecgh/go-spew
+  version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
+  subpackages:
+  - spew
+- name: github.com/eapache/go-resiliency
+  version: ef9aaa7ea8bd2448429af1a77cf41b2b3b34bdd6
+  subpackages:
+  - breaker
+- name: github.com/eapache/go-xerial-snappy
+  version: bb955e01b9346ac19dc29eb16586c90ded99a98c
+- name: github.com/eapache/queue
+  version: 093482f3f8ce946c05bcba64badd2c82369e084d
 - name: github.com/go-sql-driver/mysql
-  version: 3955978caca48c1658a4bb7a9c6a0f084e326af3
+  version: 1a676ac6e4dce68e9303a1800773861350374a9e
+- name: github.com/golang/snappy
+  version: 553a641470496b2327abcac10b36396bd98e45c9
+- name: github.com/gotk3/gotk3
+  version: e6314b1c74002b139f2b49f96cee7ded7cd4f2a8
+  subpackages:
+  - cairo
+  - gdk
+  - glib
+  - gtk
+  - pango
+- name: github.com/jmoiron/sqlx
+  version: cf35089a197953c69420c8d0cecda90809764b1d
+  subpackages:
+  - reflectx
 - name: github.com/mattn/go-oci8
-  version: a406da5749859419ebd8b7ad51c8833e9a64e719
+  version: cb2309b32dd28b79534adf8a219d0b3c2eb43d2e
+- name: github.com/pierrec/lz4
+  version: ed8d4cc3b461464e69798080a0092bd028910298
+- name: github.com/pierrec/xxHash
+  version: a0006b13c722f7f12368c00a3d3c2ae8a999a0c6
+  subpackages:
+  - xxHash32
+- name: github.com/pkg/errors
+  version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+- name: github.com/rcrowley/go-metrics
+  version: 8732c616f52954686704c8645fe1a9d59e9df7c1
+- name: github.com/Shopify/sarama
+  version: 598379494566842a64f60ccc237fef992b28d051
+- name: github.com/sourcegraph/go-webkit2
+  version: ade305cf91f47f5296726318090d6ad19ac676d7
+  subpackages:
+  - webkit2
+- name: github.com/sourcegraph/webloop
+  version: 72049fd4d5a66cd1b25fecaed253763d36bd6c62
+- name: github.com/sqs/gojs
+  version: 12d0b32828191c4eb85c227f00bf06492d452c43
+- name: github.com/veqryn/go-email
+  version: 388713805b1e28295565f252ab14b53e1267b0bc
+  subpackages:
+  - email
+- name: golang.org/x/crypto
+  version: 21652f85b0fdddb6c2b6b77a5beca5c5a908174a
 - name: golang.org/x/net
   version: fb93926129b8ec0056f2f458b1f519654814edf0
   subpackages:
   - context
+- name: google.golang.org/appengine
+  version: 5bee14b453b4c71be47ec1781b0fa61c2ea182db
+  subpackages:
+  - cloudsql
+- name: gopkg.in/goracle.v2
+  version: e1f12d7271331ba42333d27f1e1976879e1fe358
 testImports: []

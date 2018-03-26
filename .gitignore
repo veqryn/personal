@@ -20,3 +20,4 @@ _phpstorm.meta.php
 
 # Ignore vendor dir
 vendor/
+glide.lock

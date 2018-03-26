@@ -2,3 +2,9 @@ package: github.com/veqryn/personal
 import:
 - package: github.com/go-sql-driver/mysql
 - package: github.com/mattn/go-oci8
+- package: github.com/Shopify/sarama
+- package: golang.org/x/crypto
+- package: github.com/sourcegraph/webloop
+- package: github.com/sourcegraph/go-webkit2/webkit2
+- package: github.com/gotk3/gotk3/gtk
+- package: github.com/jmoiron/sqlx

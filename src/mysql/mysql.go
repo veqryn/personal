@@ -16,7 +16,7 @@ func main() {
 	}
 
 	// ping
-	if err := conn.Ping(); err != nil {
+	if err = conn.Ping(); err != nil {
 		panic(err)
 	}
 
@@ -34,14 +34,14 @@ func main() {
 		}
 		var (
 			id int64
-			ip      int64
+			ip int64
 		)
-		if err := rows.Scan(&id, &ip); err != nil {
+		if err = rows.Scan(&id, &ip); err != nil {
 			panic(err)
 		}
 		fmt.Printf("%d, %d\n", id, ip)
 	}
-	if err := rows.Err(); err != nil {
+	if err = rows.Err(); err != nil {
 		panic(err)
 	}
 }

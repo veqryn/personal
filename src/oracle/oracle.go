@@ -36,7 +36,7 @@ func main() {
 		}
 		var (
 			id int64
-			ip      int64
+			ip int64
 		)
 		if err = rows.Scan(&id, &ip); err != nil {
 			panic(err)

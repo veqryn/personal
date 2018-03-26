@@ -47,3 +47,29 @@ services:
       - .:/go/src/github.com/veqryn/personal
     depends_on:
       - oracle-db-dev
+
+  kafka:
+    container_name: kafka
+    hostname: kafka
+    image: "spotify/kafka:latest"
+    ports:
+      - "2181:2181"
+      - "9092:9092"
+
+  kafka-golang:
+    image: golang:1.8
+    command: /bin/bash -c "go build -o /go/bin/kafka github.com/veqryn/personal/src/kafka && /go/bin/kafka"
+    container_name: kafka-golang
+    hostname: kafka-golang
+    volumes:
+      - .:/go/src/github.com/veqryn/personal
+    depends_on:
+      - kafka
+
+  kafka-consumer:
+    image: ryane/kafkacat:latest
+    command: ["-q", "-C", "-b", "kafka:9092", "-t", "important", "-K", ",", "-O"]
+    container_name: kafka-consumer
+    hostname: kafka-consumer
+    depends_on:
+      - kafka-golang
