@@ -1,10 +1,28 @@
 package: github.com/veqryn/personal
 import:
-- package: github.com/go-sql-driver/mysql
-- package: github.com/mattn/go-oci8
 - package: github.com/Shopify/sarama
-- package: golang.org/x/crypto
-- package: github.com/sourcegraph/webloop
-- package: github.com/sourcegraph/go-webkit2/webkit2
-- package: github.com/gotk3/gotk3/gtk
+- package: github.com/avct/uasurfer
+- package: github.com/go-sql-driver/mysql
+- package: github.com/gotk3/gotk3
+  subpackages:
+  - glib
+  - gtk
 - package: github.com/jmoiron/sqlx
+- package: github.com/kelseyhightower/envconfig
+- package: github.com/mattn/go-oci8
+- package: github.com/mssola/user_agent
+- package: github.com/sourcegraph/go-webkit2
+  subpackages:
+  - webkit2
+- package: github.com/sqs/gojs
+- package: github.com/ua-parser/uap-go
+  subpackages:
+  - uaparser
+- package: github.com/veqryn/go-email
+  subpackages:
+  - email
+- package: gopkg.in/goracle.v2
+testImport:
+- package: github.com/aws/aws-sdk-go
+  subpackages:
+  - aws
